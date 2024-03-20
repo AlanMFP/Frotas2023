@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consolidado</title>
+    <link rel="shortcut icon" href="icones/cartransport.ico" type="image/x-icon">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #fullscreenContainer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="fullscreenContainer">
+        <iframe id="powerbiIframe" title="Consolidado Junho 23" src="https://app.powerbi.com/reportEmbed?reportId=0be39a75-748e-497e-b76f-bf71f16e1ee8&autoAuth=true&ctid=7893571b-6c2c-4cef-b4da-7d4b266a0626" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        function makeIframeFullscreen() {
+            const iframe = document.getElementById('powerbiIframe');
+
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.mozRequestFullScreen) {
+                iframe.mozRequestFullScreen();
+            } else if (iframe.webkitRequestFullscreen) {
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) {
+                iframe.msRequestFullscreen();
+            }
+        }
+
+        makeIframeFullscreen();
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
